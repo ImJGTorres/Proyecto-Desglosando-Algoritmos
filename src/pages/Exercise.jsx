@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import exercisesData from '../data';
 import Visualizer1 from '../visualizers/Visualizer1';
 import Visualizer2 from '../visualizers/Visualizer2';
@@ -12,6 +12,7 @@ import Visualizer9 from '../visualizers/Visualizer9';
 
 const Exercise = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const data = exercisesData[parseInt(id)] || { title: 'Ejercicio no encontrado' };
 
   return (
@@ -89,7 +90,7 @@ const Exercise = () => {
             <p>Anímate a intentar resolverlo tú mismo, aquí está la plantilla del ejercicio con los casos de prueba, solo tienes que completar los métodos y probar el código.</p>
           </div>
           <div className="col-12 col-md-6 mb-3 mb-md-0 text-center">
-            <button className="btn-1" onClick={() => window.open(data.template)}>Plantilla del ejercicio</button>
+            <button className="btn-1" onClick={() => window.open(data.template, '_blank')}>Plantilla del ejercicio</button>
           </div>
         </div>
       </section>
@@ -112,7 +113,7 @@ const Exercise = () => {
               <p>En este pdf se presenta la solución del ejercicio mediante dos soluciones, una cándida y otra óptima, adicionalmente dejamos el enlace de la solución en GitHub para más profundización.
               </p>
               <div className="button-container">
-                <button className="btn-1" onClick={() => window.open(data.github)}>GitHub</button>
+                <button className="btn-1" onClick={() => window.open(data.github, '_blank')}>GitHub</button>
               </div>
             </div>
           </div>
@@ -140,10 +141,16 @@ const Exercise = () => {
           <div className="w-100">
             <div className="d-flex justify-content-between pe-md-5 ps-md-5">
               {parseInt(id) > 1 && (
-                <button className="btn-1" onClick={() => window.location.href = `/ejercicio/${parseInt(id) - 1}`}>Ejercicio Anterior</button>
+                <button className="btn-1" onClick={() => {
+                  navigate(`/ejercicio/${parseInt(id) - 1}`);
+                  window.scrollTo(0, 0);
+                }}>Ejercicio Anterior</button>
               )}
               {parseInt(id) < 9 && (
-                <button className="btn-1" onClick={() => window.location.href = `/ejercicio/${parseInt(id) + 1}`}>Siguiente Ejercicio</button>
+                <button className="btn-1" onClick={() => {
+                  navigate(`/ejercicio/${parseInt(id) + 1}`);
+                  window.scrollTo(0, 0);
+                }}>Siguiente Ejercicio</button>
               )}
             </div>
           </div>

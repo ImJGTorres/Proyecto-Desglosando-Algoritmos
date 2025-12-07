@@ -4,6 +4,10 @@
 
 Esta es una aplicación web educativa desarrollada en React para estudiantes de Análisis de Algoritmos. La plataforma presenta una colección de ejercicios de programación con descripciones detalladas, soluciones en código, análisis de complejidad y visualizaciones interactivas. El objetivo es reforzar la comprensión de conceptos fundamentales como la **correctitud**, **completitud** y **complejidad** de los algoritmos.
 
+**Página Desplegada**: https://desglosando-algoritmos.vercel.app/
+
+La aplicación está desplegada en **Vercel**, una plataforma moderna de hosting que permite despliegues continuos desde repositorios Git, ofreciendo mejor rendimiento, escalabilidad y actualizaciones automáticas.
+
 ### Conceptos Básicos
 
 - **Correctitud**: Un algoritmo es correcto si produce la salida esperada para todas las entradas válidas, garantizando que su solución es válida en todos los casos.

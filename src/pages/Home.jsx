@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
 
 const Home = () => {
+  const handleExerciseClick = () => {
+    window.scrollTo(0, 0);
+  };
   return (
     <div className="container py-4">
       <section className="mb-5">
@@ -77,7 +80,7 @@ const Home = () => {
         <h2>Ejercicios</h2>
         <div className="exercises row">
           <div className="exercise col-12 col-sm-6 col-md-4 mb-4">
-            <Link to="/ejercicio/1">
+            <Link to="/ejercicio/1" onClick={handleExerciseClick}>
               <div className="image-container">
                 <img
                   src="imagenes/hotel.png"
@@ -97,7 +100,7 @@ const Home = () => {
             </Link>
           </div>
           <div className="exercise col-12 col-sm-6 col-md-4 mb-4">
-            <Link to="/ejercicio/2">
+            <Link to="/ejercicio/2" onClick={handleExerciseClick}>
               <div className="image-container">
                 <img
                   src="imagenes/funcion.png"
@@ -114,7 +117,7 @@ const Home = () => {
             </Link>
           </div>
           <div className="exercise col-12 col-sm-6 col-md-4 mb-4">
-            <Link to="/ejercicio/3">
+            <Link to="/ejercicio/3" onClick={handleExerciseClick}>
               <div className="image-container">
                 <img
                   src="imagenes/secuencia.png"
@@ -135,7 +138,7 @@ const Home = () => {
         {/* SEGUNDA FILA */}
         <div className="exercises row">
           <div className="exercise col-12 col-sm-6 col-md-4 mb-4">
-            <Link to="/ejercicio/4">
+            <Link to="/ejercicio/4" onClick={handleExerciseClick}>
               <div className="image-container">
                 <img
                   src="imagenes/ordenado.png"
@@ -152,7 +155,7 @@ const Home = () => {
             </Link>
           </div>
           <div className="exercise col-12 col-sm-6 col-md-4 mb-4">
-            <Link to="/ejercicio/5">
+            <Link to="/ejercicio/5" onClick={handleExerciseClick}>
               <div className="image-container">
                 <img
                   src="imagenes/multiplicar.png"
@@ -172,7 +175,7 @@ const Home = () => {
             </Link>
           </div>
           <div className="exercise col-12 col-sm-6 col-md-4 mb-4">
-            <Link to="/ejercicio/6">
+            <Link to="/ejercicio/6" onClick={handleExerciseClick}>
               <div className="image-container">
                 <img
                   src="imagenes/suma.png"
@@ -193,7 +196,7 @@ const Home = () => {
         {/* TERCERA FILA */}
         <div className="exercises row">
           <div className="exercise col-12 col-sm-6 col-md-4 mb-4">
-            <Link to="/ejercicio/7">
+            <Link to="/ejercicio/7" onClick={handleExerciseClick}>
               <div className="image-container">
                 <img
                   src="imagenes/repeticion.png"
@@ -210,7 +213,7 @@ const Home = () => {
             </Link>
           </div>
           <div className="exercise col-12 col-sm-6 col-md-4 mb-4">
-            <Link to="/ejercicio/8">
+            <Link to="/ejercicio/8" onClick={handleExerciseClick}>
               <div className="image-container">
                 <img
                   src="imagenes/team.png"
@@ -227,7 +230,7 @@ const Home = () => {
             </Link>
           </div>
           <div className="exercise col-12 col-sm-6 col-md-4 mb-4">
-            <Link to="/ejercicio/9">
+            <Link to="/ejercicio/9" onClick={handleExerciseClick}>
               <div className="image-container">
                 <img
                   src="imagenes/gusano.png"
@@ -245,10 +248,6 @@ const Home = () => {
           </div>
         </div>
 
-        {/* CUARTA FILA */}
-        <div className="exercises row">
-
-        </div>
       </section>
     </div>
   );
